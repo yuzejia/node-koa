@@ -1,5 +1,5 @@
 import mysql  from 'mysql2';
-import {YZJ_TEST_CONFIG} from "../config/db-config.js"
+import {YZJ_TEST_CONFIG} from "../config/db-config"
 const connection = mysql.createConnection({...YZJ_TEST_CONFIG});
 
 connection.connect((err)=> {
