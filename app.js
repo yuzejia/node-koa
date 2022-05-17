@@ -1,5 +1,5 @@
-const Koa = require('koa')
-
+import Koa from 'koa'
+import connection from "./db/index.js"
 
 const app = new Koa()
 
