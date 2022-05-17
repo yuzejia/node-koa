@@ -1,0 +1,26 @@
+{
+  "name": "node-koa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yuzejia/node-koa.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yuzejia/node-koa/issues"
+  },
+  "homepage": "https://github.com/yuzejia/node-koa#readme",
+  "dependencies": {
+    "koa": "^2.13.4"
+  },
+  "devDependencies": {
+    "mysql": "^2.18.1",
+    "mysql2": "^2.3.3"
+  }
+}
