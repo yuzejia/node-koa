@@ -2,7 +2,7 @@ import Koa from "koa";
 // import connection from "./db/index"
 import { router } from "./lib/api/index";
 import mysql from "./lib/core/hooks/mysql";
-
+import * as bodyParser from "koa-bodyparser"
 const app = new Koa();
 
 mysql(app);
@@ -14,6 +14,7 @@ function handle404Errors(ctx) {
   }
 }
 
+app.use(bodyParser())
 app.use(router.routes());
 app.use(handle404Errors);
 app.listen(3000);
