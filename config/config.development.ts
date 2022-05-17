@@ -1,4 +1,4 @@
-export default app => {
+export default (app) => {
   return {
     mysql: {
       host: "175.27.138.124",

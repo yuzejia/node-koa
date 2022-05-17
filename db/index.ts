@@ -1,6 +1,7 @@
-import mysql  from 'mysql2';
-import {YZJ_TEST_CONFIG} from "../config/db-config"
-const connection = mysql.createConnection({...YZJ_TEST_CONFIG});
+import * as mysql  from 'mysql2';
+import mysqlConfig from "../config/db-config"
+
+const connection = mysql.createConnection({...mysqlConfig});
 
 connection.connect((err)=> {
     if(err) {

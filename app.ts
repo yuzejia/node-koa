@@ -1,9 +1,21 @@
-import Koa from 'koa'
+import Koa from "koa";
 // import connection from "./db/index"
-import {router} from "./router/index"
-const app = new Koa()
+import { router } from "./lib/api/index";
+import mysql from "./lib/core/hooks/mysql";
 
-app.use(router.routes())
-app.listen(3000)
+const app = new Koa();
 
-console.log( 'open: http://localhost:3000/');
+mysql(app);
+
+function handle404Errors(ctx) {
+  console.log(ctx.status);
+  if (ctx.status == 404) {
+    ctx.body = '<h1 style="text-align: center;"> 404 </h1>';
+  }
+}
+
+app.use(router.routes());
+app.use(handle404Errors);
+app.listen(3000);
+
+console.log("open: http://localhost:3000/");
