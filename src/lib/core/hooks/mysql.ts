@@ -1,5 +1,5 @@
-import mysql from "mysql2"
-import mysqlConfig from "../../../config/db-config"
+import * as mysql from "mysql2"
+import mysqlConfig from "../../../config/db-config";
 export default async (app)=> {
     
     const _mysqlConfig = mysqlConfig;

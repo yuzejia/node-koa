@@ -1,4 +1,4 @@
-import Koa from "koa";
+import * as Koa from "koa";
 // import connection from "./db/index"
 import { router } from "./lib/api/index";
 import mysql from "./lib/core/hooks/mysql";
