@@ -2,9 +2,12 @@
   "name": "node-koa",
   "version": "1.0.0",
   "description": "",
-  "type": "modules",
   "scripts": {
-    "start": "cross-env NODE_ENV=development nodemon --exec ts-node -T app.ts"
+    "start": " cross-env NODE_ENV=development nodemon --exec ts-node -T ./src/app.ts",
+    "build": "rimraf dist/* && tsc",
+    "pro": "npx pm2 start ecosystem.config.js --env production",
+    "restart": "pm2 restart ecosystem.config.js --env production",
+    "stop": "npx pm2 stop ecosystem.config.js"
   },
   "repository": {
     "type": "git",
@@ -17,23 +20,29 @@
   },
   "homepage": "https://github.com/yuzejia/node-koa#readme",
   "dependencies": {
-    "babel-cli": "^6.26.0",
     "babel-loader": "^8.2.5",
     "babel-preset-es2015": "^6.24.1",
-    "koa": "^2.13.4",
     "koa-router": "^10.1.1",
     "lerna": "^4.0.0",
     "ts-node": "^10.7.0",
     "typescript": "^4.6.4"
   },
   "devDependencies": {
+    "@babel/core": "^7.17.10",
+    "@babel/preset-env": "^7.17.10",
     "@types/koa": "^2.13.4",
     "@types/koa-bodyparser": "^4.3.7",
     "@types/koa-router": "^7.4.4",
+    "@typescript-eslint/eslint-plugin": "^5.24.0",
+    "@typescript-eslint/parser": "^5.23.0",
+    "babel-cli": "^6.26.0",
     "cross-env": "^7.0.3",
+    "eslint": "^8.15.0",
+    "koa": "^2.13.4",
     "koa-bodyparser": "^4.3.0",
     "log4js": "^6.4.7",
     "mysql2": "^2.3.3",
-    "nodemon": "^2.0.16"
+    "nodemon": "^2.0.16",
+    "pm2": "^5.2.0"
   }
 }
