@@ -1,11 +1,11 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const db_config_1 = require("./db-config");
-const index_1 = require("./index");
-exports.default = (body) => {
-    return new Promise((resolve, reject) => {
-        var addSql = `INSERT INTO ${db_config_1.USER_INFO}(Id,name) VALUES(0,?)`;
-        var addSqlParams = [`${body.name}`];
+var db_config_1 = require("./db-config");
+var index_1 = require("./index");
+exports.default = (function (body) {
+    return new Promise(function (resolve, reject) {
+        var addSql = "INSERT INTO ".concat(db_config_1.USER_INFO, "(Id,name) VALUES(0,?)");
+        var addSqlParams = ["".concat(body.name)];
         index_1.default.query(addSql, addSqlParams, function (error, results, fields) {
             if (error) {
                 console.log('[INSERT ERROR] - ', error.message);
@@ -17,4 +17,4 @@ exports.default = (body) => {
             resolve(results);
         });
     });
-};
+});

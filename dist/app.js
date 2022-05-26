@@ -1,10 +1,10 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const Koa = require("koa");
-const index_1 = require("./lib/api/index");
-const mysql_1 = require("./lib/core/hooks/mysql");
-const bodyParser = require("koa-bodyparser");
-const app = new Koa();
+var Koa = require("koa");
+var index_1 = require("./lib/api/index");
+var mysql_1 = require("./lib/core/hooks/mysql");
+var bodyParser = require("koa-bodyparser");
+var app = new Koa();
 (0, mysql_1.default)(app);
 function handle404Errors(ctx) {
     console.log(ctx.status);

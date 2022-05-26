@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.default = (app) => {
+exports.default = (function (app) {
     return {
         mysql: {
             host: "175.27.138.124",
@@ -9,4 +9,4 @@ exports.default = (app) => {
             database: "yzjdb",
         },
     };
-};
+});

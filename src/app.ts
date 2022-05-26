@@ -1,7 +1,7 @@
 import * as Koa from "koa";
 // import connection from "./db/index"
-import { router } from "./lib/api/index";
-import mysql from "./lib/core/hooks/mysql";
+import { router } from "./core/api/index";
+import mysql from "./core/hooks/mysql";
 import * as bodyParser from "koa-bodyparser"
 const app = new Koa();
 
